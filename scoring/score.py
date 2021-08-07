@@ -33,7 +33,7 @@ class Scorer:
             if location_owner is None:
                 # Shared area, everyone gets points
                 return points
-            if location_owner == location:
+            if location_owner == owner:
                 # Owner specific area which matches
                 return points
             return 0

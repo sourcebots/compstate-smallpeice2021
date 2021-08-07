@@ -58,6 +58,114 @@ class ScorerTests(unittest.TestCase):
             'DEF': 0,
         }, [])
 
+    def test_single_claim_docking_area(self):
+        self.assertScores({
+            'ABC': 1,
+            'DEF': 0,
+        }, [
+            {
+                'zone': 0,
+                'token_index': 42,
+                'location': 'docking_area',
+                'time': 4.432,
+            },
+        ])
+
+    def test_single_claim_raised_area(self):
+        self.assertScores({
+            'ABC': 3,
+            'DEF': 0,
+        }, [
+            {
+                'zone': 0,
+                'token_index': 42,
+                'location': 'zone_0_raised_area',
+                'time': 4.432,
+            },
+        ])
+
+    def test_single_claim_wrong_raised_area(self):
+        self.assertScores({
+            'ABC': 0,
+            'DEF': 0,
+        }, [
+            {
+                'zone': 0,
+                'token_index': 42,
+                'location': 'zone_1_raised_area',
+                'time': 4.432,
+            },
+        ])
+
+    def test_moved_back_to_arena(self):
+        self.assertScores({
+            'ABC': 0,
+            'DEF': 0,
+        }, [
+            {
+                'zone': 0,
+                'token_index': 42,
+                'location': 'zone_1_raised_area',
+                'time': 4,
+            },
+            {
+                'zone': 0,
+                'token_index': 42,
+                'location': 'arena',
+                'time': 5,
+            },
+        ])
+
+    def test_two_claims_same_area(self):
+        self.assertScores({
+            'ABC': 1,
+            'DEF': 1,
+        }, [
+            {
+                'zone': 0,
+                'token_index': 42,
+                'location': 'docking_area',
+                'time': 4,
+            },
+            {
+                'zone': 1,
+                'token_index': 13,
+                'location': 'docking_area',
+                'time': 5,
+            },
+        ])
+
+    def test_multiple_tokens(self):
+        self.assertScores({
+            'ABC': 4,
+            'DEF': 1,
+        }, [
+            {
+                'zone': 0,
+                'token_index': 43,
+                'location': 'docking_area',
+                'time': 1,
+            },
+            {
+                'zone': 0,
+                'token_index': 42,
+                'location': 'docking_area',
+                'time': 4,
+            },
+            {
+                'zone': 0,
+                'token_index': 43,
+                'location': 'zone_0_raised_area',
+                'time': 5,
+            },
+            {
+                'zone': 1,
+                'token_index': 13,
+                'location': 'docking_area',
+                'time': 5,
+            },
+        ])
+
 
 if __name__ == '__main__':
     unittest.main()
