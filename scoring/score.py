@@ -46,7 +46,7 @@ class Scorer:
         }
 
         points_per_zone = {0: 0, 1: 0}
-        for tok, (owner, location) in end_state.items():
+        for owner, location in end_state.values():
             points_per_zone[owner] += points_for_location(owner, location)
 
         return {
