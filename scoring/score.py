@@ -30,11 +30,12 @@ class Scorer:
     def calculate_scores(self):
         def points_for_location(owner, location):
             location_owner, points = LOCATION_VALUES[location]
-            if location_owner is None:
-                # Shared area, everyone gets points
-                return points
-            if location_owner == owner:
-                # Owner specific area which matches
+            if (
+                # Shared spaces, everyone gets points for their tokens
+                location_owner is None or
+                # Owned spaces, just the owner points for their tokens
+                location_owner == owner
+            ):
                 return points
             return 0
 
