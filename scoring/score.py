@@ -10,7 +10,7 @@ LOCATION_VALUES = {
 class Scorer:
     # Assumption: we will trust the *ordering* of the entries in the data we
     # are given and *ignore* the actual 'time' values. We defer handling of
-    # equialent-time operations to the token controller.
+    # equivalent-time operations to the token controller.
 
     def __init__(self, teams_data, arena_data):
         self._zone_to_tla = {
