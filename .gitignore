@@ -1,0 +1,7 @@
+/.update-lock
+/.update-pls
+
+/out.jpg
+
+__pycache__
+*.pyc

@@ -1,0 +1,9 @@
+arenas:
+  Simulator:
+    display_name: ''
+
+corners:
+  0:
+    colour: '#ff00ff'
+  1:
+    colour: '#ffff00'

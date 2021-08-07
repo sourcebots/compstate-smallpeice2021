@@ -1,0 +1,16 @@
+match_number: 0
+arena_id: Simulator
+teams:
+  TLA1:
+    zone: 0
+    disqualified: false
+    present: true
+  TLA2:
+    zone: 1
+    disqualified: false
+    present: true
+
+arena_zones:
+  other:
+    # List of mappings each with keys 'zone', 'station_code' and 'time'
+    territory_claims: []
