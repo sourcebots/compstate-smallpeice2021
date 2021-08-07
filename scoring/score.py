@@ -1,4 +1,4 @@
-DATA = {
+LOCATION_VALUES = {
     # Location -> (Owner, Points if owner matches)
     'arena':              (None, 0),
     'docking_area':       (None, 1),
@@ -29,7 +29,7 @@ class Scorer:
 
     def calculate_scores(self):
         def points_for_location(owner, location):
-            location_owner, points = DATA[location]
+            location_owner, points = LOCATION_VALUES[location]
             if location_owner is None:
                 # Shared area, everyone gets points
                 return points
