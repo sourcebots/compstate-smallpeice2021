@@ -12,5 +12,11 @@ teams:
 
 arena_zones:
   other:
-    # List of mappings each with keys 'zone', 'station_code' and 'time'
-    territory_claims: []
+    # List of Token Claims, which look like this:
+    # {
+    #     'zone': 0 | 1,
+    #     'token_index': int,
+    #     'location': 'arena' | 'docking_area' | 'zone_0_raised_area' | 'zone_1_raised_area',
+    #     'time': float,
+    # }
+    token_claims: []
