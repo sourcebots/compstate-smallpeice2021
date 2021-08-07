@@ -1,9 +1,9 @@
-LOCATION_VALUES = {
-    # Location -> (Owner, Points if owner matches)
-    'arena':              (None, 0),
-    'docking_area':       (None, 1),
-    'zone_0_raised_area': (0,    3),
-    'zone_1_raised_area': (1,    3),
+POINTS_FOR_LOCATION = {
+    # Location -> get points callable
+    'arena': lambda _: 0,
+    'docking_area': lambda _: 1,
+    'zone_0_raised_area': lambda token_owner: 3 if token_owner == 0 else 0,
+    'zone_1_raised_area': lambda token_owner: 3 if token_owner == 1 else 0,
 }
 
 
@@ -28,17 +28,6 @@ class Scorer:
         self._token_claims = arena_data['other']['token_claims']
 
     def calculate_scores(self):
-        def points_for_location(owner, location):
-            location_owner, points = LOCATION_VALUES[location]
-            if (
-                # Shared spaces, everyone gets points for their tokens
-                location_owner is None or
-                # Owned spaces, just the owner points for their tokens
-                location_owner == owner
-            ):
-                return points
-            return 0
-
         # Mapping from token -> (owning zone, location)
         end_state = {
             claim['token_index']: (claim['zone'], claim['location'])
@@ -47,7 +36,7 @@ class Scorer:
 
         points_per_zone = {0: 0, 1: 0}
         for owner, location in end_state.values():
-            points_per_zone[owner] += points_for_location(owner, location)
+            points_per_zone[owner] += POINTS_FOR_LOCATION[location](owner)
 
         return {
             tla: points_per_zone[zone]
