@@ -1,3 +1,4 @@
 # fully qualified names of machines which have deployments which
 # support triggered updates
-deployments: []
+deployments:
+ - srcomp.jss.sh
