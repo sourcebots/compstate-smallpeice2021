@@ -1,4 +1,7 @@
 import pprint
+import sys
+
+import json
 
 POINTS_FOR_LOCATION = {
     # Location -> get points callable
@@ -57,6 +60,19 @@ class Scorer:
 
         print(f"Remove the last {len(bad_claims)}, they have timestamp {last_claim_time}")
         print()
+
+        with open(sys.argv[1], mode='r') as f:
+            raw = json.load(f)
+            raw_token_claims = raw['arena_zones']['other']['token_claims']
+            assert self._token_claims == raw_token_claims, "Loaded bad raw data"
+
+            raw_good_claims = raw_token_claims[:-len(bad_claims)]
+            assert raw_good_claims + bad_claims == raw_token_claims, "Mismatch!"
+
+            raw_token_claims[:] = raw_good_claims
+
+        with open(sys.argv[1], mode='w', newline='\r\n') as f:
+            json.dump(raw, fp=f, indent=4)
 
         points_per_zone = {0: 0, 1: 0}
         for owner, location in end_state.values():
