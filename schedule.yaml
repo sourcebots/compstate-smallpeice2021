@@ -57,40 +57,40 @@ static_knockout:
       # TODO: all timing is placeholder
       0:
         arena: Simulator
-        start_time: 2021-08-20 11:53:00+01:00
+        start_time: 2021-08-20 12:08:00+01:00
         display_name: Quarter 1
         teams: [S7, S2]
       1:
         arena: Simulator
-        start_time: 2021-08-20 12:56:30+01:00
+        start_time: 2021-08-20 12:11:00+01:00
         display_name: Quarter 2
         teams: [S3, S6]
       2:
         arena: Simulator
-        start_time: 2021-08-20 12:00:00+01:00
+        start_time: 2021-08-20 12:14:00+01:00
         display_name: Quarter 3
         teams: [S1, S8]
       3:
         arena: Simulator
-        start_time: 2021-08-20 12:03:30+01:00
+        start_time: 2021-08-20 12:17:00+01:00
         display_name: Quarter 4
         teams: [S5, S4]
     1:
       0:
         arena: Simulator
-        start_time: 2021-08-20 12:11:30+01:00
+        start_time: 2021-08-20 12:21:00+01:00
         display_name: Semi 1
                # S2  ,  S3
         teams: ['000', '010']
       1:
         arena: Simulator
-        start_time: 2021-08-20 12:15:00+01:00
+        start_time: 2021-08-20 12:24:00+01:00
         display_name: Semi 2
                # S4  ,  S1
         teams: ['030', '020']
     2:
       0:
         arena: Simulator
-        start_time: 2021-08-20 12:30:00+01:00
+        start_time: 2021-08-20 12:28:00+01:00
                # S1  ,  S2
         teams: ['110', '100']
