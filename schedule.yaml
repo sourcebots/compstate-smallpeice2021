@@ -32,9 +32,9 @@ match_periods:
 
   #
   knockout:
-  - start_time: 2021-08-20 12:10:00+01:00
-    end_time: 2021-08-20 12:30:00+01:00
-    description: Knockouts (Placeholder)
+  - start_time: 2021-08-20 12:07:00+01:00
+    end_time: 2021-08-20 12:31:00+01:00
+    description: Knockouts
 
 league:
   # Extra spacing before an arbitrary set of matches
