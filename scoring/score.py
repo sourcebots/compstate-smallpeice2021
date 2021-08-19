@@ -33,13 +33,6 @@ class Scorer:
         self._token_claims = arena_data['other']['token_claims']
 
     def calculate_scores(self):
-        # Mapping from token -> (owning zone, location)
-        end_state = {
-            claim['token_index']: (claim['zone'], claim['location'])
-            for claim in self._token_claims
-        }
-        pprint.pprint(end_state)
-
         last_claim = self._token_claims[-1]
         last_claim_time = last_claim['time']
         assert last_claim_time > 120, "Last claim before end of match"
@@ -47,15 +40,26 @@ class Scorer:
         bad_claims = [
             x
             for x in self._token_claims
-            if x['time'] == last_claim_time
+            if x['time'] == last_claim_time and x['location'] == 'arena'
         ]
         bad_claim_tokens = [x['token_index'] for x in bad_claims]
         pprint.pprint(bad_claims)
 
-        tokens_set = set(end_state.keys())
+        maybe_good_claims = self._token_claims[:-len(bad_claims)]
+        # Mapping from token -> (owning zone, location)
+        maybe_good_end_state = {
+            claim['token_index']: (claim['zone'], claim['location'])
+            for claim in maybe_good_claims
+        }
+
+        expected_tokens_set = set(
+            token
+            for token, (_, location) in maybe_good_end_state.items()
+            if location != 'arena'
+        )
         bad_tokens_set = set(bad_claim_tokens)
-        missing = bad_tokens_set - tokens_set
-        extra = tokens_set - bad_tokens_set
+        missing = bad_tokens_set - expected_tokens_set
+        extra = expected_tokens_set - bad_tokens_set
         assert not missing and not extra, f'{missing=}, {extra=}'
 
         print(f"Remove the last {len(bad_claims)}, they have timestamp {last_claim_time}")
@@ -75,7 +79,7 @@ class Scorer:
             json.dump(raw, fp=f, indent=4)
 
         points_per_zone = {0: 0, 1: 0}
-        for owner, location in end_state.values():
+        for owner, location in maybe_good_end_state.values():
             points_per_zone[owner] += POINTS_FOR_LOCATION[location](owner)
 
         return {
