@@ -11,8 +11,8 @@ then
     exit 1
 fi
 
-SIMULATOR_ROOT="realpath ${SIMULATOR_ROOT}"
-ARCHIVES_DIR="realpath ${ARCHIVES_DIR}"
+SIMULATOR_ROOT=$(realpath "${SIMULATOR_ROOT}")
+ARCHIVES_DIR=$(realpath "${ARCHIVES_DIR}")
 
 cd $(dirname $0)
 
