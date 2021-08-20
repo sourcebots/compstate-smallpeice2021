@@ -77,19 +77,19 @@ static_knockout:
     1:
       0:
         arena: Simulator
-        start_time: 2021-08-20 12:21:00+01:00
+        start_time: 2021-08-20 12:34:00+01:00
         display_name: Semi 1
                # S2  ,  S3
-        teams: ['000', '010']
+        teams: [S2, S3]
       1:
         arena: Simulator
-        start_time: 2021-08-20 12:24:00+01:00
+        start_time: 2021-08-20 12:47:00+01:00
         display_name: Semi 2
                # S4  ,  S1
-        teams: ['030', '020']
+        teams: [S8, S5]
     2:
       0:
         arena: Simulator
-        start_time: 2021-08-20 12:28:00+01:00
+        start_time: 2021-08-20 12:40:00+01:00
                # S1  ,  S2
         teams: ['110', '100']
