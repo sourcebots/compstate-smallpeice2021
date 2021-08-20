@@ -92,4 +92,4 @@ static_knockout:
         arena: Simulator
         start_time: 2021-08-20 12:50:00+01:00
                # S1  ,  S2
-        teams: [S3, S8]
+        teams: [S8, S3]
