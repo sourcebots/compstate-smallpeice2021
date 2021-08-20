@@ -18,12 +18,12 @@ cd $(dirname $0)
 
 srcomp for-each-match . 32-35 ${SIMULATOR_ROOT}/script/run-comp-match ${ARCHIVES_DIR} {NUMBER} @TLAS
 
-cp ${ARCHIVES_DIR}/*.yaml league/Simulator/
+cp ${ARCHIVES_DIR}/matches/*.yaml league/Simulator/
 
 srcomp for-each-match . 36,37 ${SIMULATOR_ROOT}/script/run-comp-match ${ARCHIVES_DIR} {NUMBER} @TLAS
 
-cp ${ARCHIVES_DIR}/*.yaml league/Simulator/
+cp ${ARCHIVES_DIR}/matches/*.yaml league/Simulator/
 
 srcomp for-each-match . 38 ${SIMULATOR_ROOT}/script/run-comp-match ${ARCHIVES_DIR} {NUMBER} @TLAS
 
-cp ${ARCHIVES_DIR}/*.yaml league/Simulator/
+cp ${ARCHIVES_DIR}/matches/*.yaml league/Simulator/
