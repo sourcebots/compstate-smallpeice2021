@@ -1,0 +1,75 @@
+{
+    "match_number": 30,
+    "arena_id": "Simulator",
+    "teams": {
+        "T08": {
+            "zone": 0
+        },
+        "T04": {
+            "zone": 1
+        }
+    },
+    "duration": 120,
+    "recording_config": {
+        "resolution": {
+            "width": 1920,
+            "height": 1080
+        },
+        "quality": 100
+    },
+    "arena_zones": {
+        "other": {
+            "token_claims": [
+                {
+                    "zone": 1,
+                    "token_index": 17,
+                    "location": "docking_area",
+                    "time": 0.10400000000000001
+                },
+                {
+                    "zone": 0,
+                    "token_index": 18,
+                    "location": "docking_area",
+                    "time": 0.10400000000000001
+                },
+                {
+                    "zone": 0,
+                    "token_index": 4,
+                    "location": "docking_area",
+                    "time": 16.328
+                },
+                {
+                    "zone": 1,
+                    "token_index": 17,
+                    "location": "zone_1_raised_area",
+                    "time": 23.192
+                },
+                {
+                    "zone": 0,
+                    "token_index": 2,
+                    "location": "docking_area",
+                    "time": 47.424
+                },
+                {
+                    "zone": 1,
+                    "token_index": 17,
+                    "location": "arena",
+                    "time": 54.496
+                },
+                {
+                    "zone": 0,
+                    "token_index": 1,
+                    "location": "docking_area",
+                    "time": 80.70400000000001
+                },
+                {
+                    "zone": 0,
+                    "token_index": 3,
+                    "location": "docking_area",
+                    "time": 116.376
+                }
+            ],
+            "game_style": "end_state"
+        }
+    }
+}
