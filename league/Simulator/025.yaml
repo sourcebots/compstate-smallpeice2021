@@ -1,0 +1,75 @@
+{
+    "match_number": 25,
+    "arena_id": "Simulator",
+    "teams": {
+        "T06": {
+            "zone": 0
+        },
+        "T07": {
+            "zone": 1
+        }
+    },
+    "duration": 120,
+    "recording_config": {
+        "resolution": {
+            "width": 1920,
+            "height": 1080
+        },
+        "quality": 100
+    },
+    "arena_zones": {
+        "other": {
+            "token_claims": [
+                {
+                    "zone": 1,
+                    "token_index": 17,
+                    "location": "docking_area",
+                    "time": 0.10400000000000001
+                },
+                {
+                    "zone": 0,
+                    "token_index": 18,
+                    "location": "docking_area",
+                    "time": 0.10400000000000001
+                },
+                {
+                    "zone": 1,
+                    "token_index": 12,
+                    "location": "docking_area",
+                    "time": 22.36
+                },
+                {
+                    "zone": 0,
+                    "token_index": 4,
+                    "location": "docking_area",
+                    "time": 36.504
+                },
+                {
+                    "zone": 1,
+                    "token_index": 12,
+                    "location": "arena",
+                    "time": 39.624
+                },
+                {
+                    "zone": 1,
+                    "token_index": 17,
+                    "location": "arena",
+                    "time": 39.936
+                },
+                {
+                    "zone": 0,
+                    "token_index": 4,
+                    "location": "arena",
+                    "time": 40.04
+                },
+                {
+                    "zone": 0,
+                    "token_index": 2,
+                    "location": "docking_area",
+                    "time": 104.52
+                }
+            ],
+            "game_style": "end_state"
+        }
+    }
+}
