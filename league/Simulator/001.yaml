@@ -1,0 +1,93 @@
+{
+    "match_number": 1,
+    "arena_id": "Simulator",
+    "teams": {
+        "T02": {
+            "zone": 0
+        },
+        "T04": {
+            "zone": 1
+        }
+    },
+    "duration": 120,
+    "recording_config": {
+        "resolution": {
+            "width": 1920,
+            "height": 1080
+        },
+        "quality": 100
+    },
+    "arena_zones": {
+        "other": {
+            "token_claims": [
+                {
+                    "zone": 1,
+                    "token_index": 17,
+                    "location": "docking_area",
+                    "time": 0.10400000000000001
+                },
+                {
+                    "zone": 0,
+                    "token_index": 18,
+                    "location": "docking_area",
+                    "time": 0.10400000000000001
+                },
+                {
+                    "zone": 0,
+                    "token_index": 18,
+                    "location": "zone_0_raised_area",
+                    "time": 8.32
+                },
+                {
+                    "zone": 0,
+                    "token_index": 18,
+                    "location": "arena",
+                    "time": 8.944
+                },
+                {
+                    "zone": 0,
+                    "token_index": 18,
+                    "location": "zone_0_raised_area",
+                    "time": 9.36
+                },
+                {
+                    "zone": 0,
+                    "token_index": 18,
+                    "location": "arena",
+                    "time": 9.984
+                },
+                {
+                    "zone": 0,
+                    "token_index": 18,
+                    "location": "zone_0_raised_area",
+                    "time": 10.088000000000001
+                },
+                {
+                    "zone": 0,
+                    "token_index": 4,
+                    "location": "docking_area",
+                    "time": 23.296
+                },
+                {
+                    "zone": 1,
+                    "token_index": 17,
+                    "location": "zone_1_raised_area",
+                    "time": 25.064
+                },
+                {
+                    "zone": 0,
+                    "token_index": 4,
+                    "location": "arena",
+                    "time": 63.128
+                },
+                {
+                    "zone": 1,
+                    "token_index": 17,
+                    "location": "arena",
+                    "time": 69.68
+                }
+            ],
+            "game_style": "end_state"
+        }
+    }
+}
