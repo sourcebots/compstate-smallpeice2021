@@ -1,0 +1,129 @@
+{
+    "match_number": 11,
+    "arena_id": "Simulator",
+    "teams": {
+        "T04": {
+            "zone": 0
+        },
+        "T06": {
+            "zone": 1
+        }
+    },
+    "duration": 120,
+    "recording_config": {
+        "resolution": {
+            "width": 1920,
+            "height": 1080
+        },
+        "quality": 100
+    },
+    "arena_zones": {
+        "other": {
+            "token_claims": [
+                {
+                    "zone": 1,
+                    "token_index": 17,
+                    "location": "docking_area",
+                    "time": 0.10400000000000001
+                },
+                {
+                    "zone": 0,
+                    "token_index": 18,
+                    "location": "docking_area",
+                    "time": 0.10400000000000001
+                },
+                {
+                    "zone": 0,
+                    "token_index": 18,
+                    "location": "zone_0_raised_area",
+                    "time": 25.272000000000002
+                },
+                {
+                    "zone": 1,
+                    "token_index": 12,
+                    "location": "docking_area",
+                    "time": 33.384
+                },
+                {
+                    "zone": 1,
+                    "token_index": 12,
+                    "location": "arena",
+                    "time": 37.024
+                },
+                {
+                    "zone": 1,
+                    "token_index": 12,
+                    "location": "docking_area",
+                    "time": 37.336
+                },
+                {
+                    "zone": 1,
+                    "token_index": 12,
+                    "location": "arena",
+                    "time": 37.544000000000004
+                },
+                {
+                    "zone": 1,
+                    "token_index": 14,
+                    "location": "docking_area",
+                    "time": 67.70400000000001
+                },
+                {
+                    "zone": 0,
+                    "token_index": 18,
+                    "location": "arena",
+                    "time": 73.424
+                },
+                {
+                    "zone": 1,
+                    "token_index": 17,
+                    "location": "arena",
+                    "time": 81.848
+                },
+                {
+                    "zone": 1,
+                    "token_index": 14,
+                    "location": "arena",
+                    "time": 82.16
+                },
+                {
+                    "zone": 1,
+                    "token_index": 14,
+                    "location": "docking_area",
+                    "time": 86.112
+                },
+                {
+                    "zone": 1,
+                    "token_index": 14,
+                    "location": "arena",
+                    "time": 87.98400000000001
+                },
+                {
+                    "zone": 1,
+                    "token_index": 14,
+                    "location": "docking_area",
+                    "time": 91.83200000000001
+                },
+                {
+                    "zone": 1,
+                    "token_index": 14,
+                    "location": "arena",
+                    "time": 93.70400000000001
+                },
+                {
+                    "zone": 1,
+                    "token_index": 14,
+                    "location": "docking_area",
+                    "time": 101.4
+                },
+                {
+                    "zone": 1,
+                    "token_index": 14,
+                    "location": "arena",
+                    "time": 105.248
+                }
+            ],
+            "game_style": "end_state"
+        }
+    }
+}
