@@ -1,0 +1,69 @@
+{
+    "match_number": 32,
+    "arena_id": "Simulator",
+    "teams": {
+        "T06": {
+            "zone": 0
+        },
+        "T02": {
+            "zone": 1
+        }
+    },
+    "duration": 120,
+    "recording_config": {
+        "resolution": {
+            "width": 1920,
+            "height": 1080
+        },
+        "quality": 100
+    },
+    "arena_zones": {
+        "other": {
+            "token_claims": [
+                {
+                    "zone": 1,
+                    "token_index": 17,
+                    "location": "docking_area",
+                    "time": 0.10400000000000001
+                },
+                {
+                    "zone": 0,
+                    "token_index": 18,
+                    "location": "docking_area",
+                    "time": 0.10400000000000001
+                },
+                {
+                    "zone": 1,
+                    "token_index": 17,
+                    "location": "zone_1_raised_area",
+                    "time": 8.216
+                },
+                {
+                    "zone": 1,
+                    "token_index": 12,
+                    "location": "docking_area",
+                    "time": 19.552
+                },
+                {
+                    "zone": 0,
+                    "token_index": 4,
+                    "location": "docking_area",
+                    "time": 31.2
+                },
+                {
+                    "zone": 0,
+                    "token_index": 4,
+                    "location": "arena",
+                    "time": 34.736000000000004
+                },
+                {
+                    "zone": 0,
+                    "token_index": 2,
+                    "location": "docking_area",
+                    "time": 78.72800000000001
+                }
+            ],
+            "game_style": "end_state"
+        }
+    }
+}
