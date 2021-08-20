@@ -2,10 +2,10 @@
 
 set -euo pipefail
 
-SIMULATOR_ROOT="$1"
-ARCHIVES_DIR="$2"
+SIMULATOR_ROOT="${1:-}"
+ARCHIVES_DIR="${2:-}"
 
-if [ -z "${SIMULATOR_ROOT}" || -z "${ARCHIVES_DIR}" ]
+if [[ -z "${SIMULATOR_ROOT}" || -z "${ARCHIVES_DIR}" ]]
 then
     echo "Usage: $0 SIMULATOR_ROOT ARCHIVES_DIR"
     exit 1
