@@ -16,14 +16,16 @@ ARCHIVES_DIR=$(realpath "${ARCHIVES_DIR}")
 
 cd $(dirname $0)
 
+mkdir -p knockout/Simulator/
+
 srcomp for-each-match . 32-35 ${SIMULATOR_ROOT}/script/run-comp-match ${ARCHIVES_DIR} {NUMBER} @TLAS
 
-cp ${ARCHIVES_DIR}/matches/*.yaml league/Simulator/
+cp ${ARCHIVES_DIR}/matches/*.yaml knockout/Simulator/
 
 srcomp for-each-match . 36,37 ${SIMULATOR_ROOT}/script/run-comp-match ${ARCHIVES_DIR} {NUMBER} @TLAS
 
-cp ${ARCHIVES_DIR}/matches/*.yaml league/Simulator/
+cp ${ARCHIVES_DIR}/matches/*.yaml knockout/Simulator/
 
 srcomp for-each-match . 38 ${SIMULATOR_ROOT}/script/run-comp-match ${ARCHIVES_DIR} {NUMBER} @TLAS
 
-cp ${ARCHIVES_DIR}/matches/*.yaml league/Simulator/
+cp ${ARCHIVES_DIR}/matches/*.yaml knockout/Simulator/
